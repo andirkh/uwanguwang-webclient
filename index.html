@@ -179,7 +179,7 @@
 						</svg>
 
 						<h1 class="hero__title">Spreadsheet jadi Web !</h1>
-						<p class="hero__text">Uwang uwang membantumu menghemat waktu dalam membuat website untuk promosi, gak pakai koding. Asal kamu bisa menggunakan Spreadsheet (semacam Microsoft Excel), Uwang uwang akan mengubah spreadsheetmu jadi website. Jadi kamu bisa langsung fokus dapetin uang di hari pertama.</p>
+						<p class="hero__text">Uwang uwang membantumu menghemat waktu dalam membuat website untuk promosi, gak pakai koding. Asal kamu bisa menggunakan Spreadsheet (semacam Microsoft Excel), Otomatis Uwang uwang mengubahnya jadi website. Jadi kamu bisa langsung fokus dapetin uang di hari pertama.</p>
 						<!-- <a href="#" class="button button__accent">Download uwang uwang</a>
 						<a href="#" class="button hero__button">Learn more</a> -->
 					</div>
@@ -309,11 +309,6 @@
 		</div>
 	</div>
 <script src='js/app.min.js'></script>
-<script type="text/javascript">
-	function helloWorld(){
-		alert(`sek masih dibikinin, sabar ya.`)
-	}
-</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61952975-8"></script>
 <script>
@@ -322,6 +317,13 @@
 	gtag('js', new Date());
 
 	gtag('config', 'UA-61952975-8');
+</script>
+<!-- my own script -->
+<script type="text/javascript">
+	function helloWorld(){
+		alert(`sek masih dibikinin, sabar ya.`)
+    ga('send', 'event', "try", "click", "coba sekarang");
+	}
 </script>
 </body>
 </html>
