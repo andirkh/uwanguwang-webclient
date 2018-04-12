@@ -1196,7 +1196,7 @@ select {
       max-height: 400px; } }
 
 .auth__auth {
-  text-align: center; }
+  text-align: left; }
   @media (min-width: 992px) {
     .auth__auth {
       width: 50%;

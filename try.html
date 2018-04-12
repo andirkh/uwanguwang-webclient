@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- social media -->
+  <meta name="title" content="Uwang Uwang">
+  <meta name="description" content="Bikin Website dari Spreadsheet buat Promosi">
+  <meta name="author" content="Uwang Uwang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Uwang Uwang">
+  <meta name="twitter:description" content="Bikin Website dari Spreadsheet buat Promosi">
+  <meta name="twitter:site" content="@andirkh">
+  <meta name="twitter:creator" content="@andirkh">
+  <meta name="twitter:image" content="https://uwanguwang.com/assets/uwanguwang-banner.jpg">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#00a300">
+  <meta name="theme-color" content="#444543">
+	<!-- Don't forget to add your metadata here -->
+	<link rel='stylesheet' href='css/style.css' />
+	<title>Coba Uwang Uwang</title>
+</head>
+<body>
+	<!-- navbar -->
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<a href="index.html" class="navbar__logo">uwang uwang</a>
+				<nav class="navbar__menu">
+					<ul>
+						<!-- <li><a target="_blank" rel="nofollow" href="https://uwang uwang.undraw.co/docs">Documentation</a></li> -->
+						<li><a href="#" style="color: #444543 !important" onclick="helloWorld()">Coba Gratis</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob">
+					<a href="" id='toggle'>
+						<!-- <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg> -->
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Authentication pages -->
+	<div class="auth">
+		<div class="container">
+			<div class="auth__inner">
+				<div class="auth__media">
+					<img src="./assets/undraw_hello_aeia.svg">
+					<p style="font-size: .7em">*btw, lebih enak dikerjakan di PC/Laptop/Tablet</p>
+				</div>
+				<div class="auth__auth">
+
+					<h3>1. Buat Duplikat <a href="#" target="_blank" style="border-bottom:10px solid #bfd542"> Spreadsheet ini </a></h3>
+					<h3>2. Klik File -> Publish to Web -> OK</h3>
+					<h3>3. "Copy" URL-nya</h3>
+					<img src="assets/copy.png"></img>
+					<h3>4. "Paste" disini 👇</h3>
+
+					<input
+						type="text"
+						id='urlLink' placeholder="https://docs.google.com/spreadsheets/d/1U6xv1c27g0B7aFyyKGSpLHFTKAYbjRVVH3dB6qgb488/edit#gid=155590555" autocomplete="off">
+					<h1>
+						<button type='submit' class="button button__accent" onclick="generate()">Generate</button>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+	<br />
+<script src='js/app.min.js'></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-61952975-8', 'auto');
+	ga('send', 'pageview');
+</script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+	function generate(){
+		console.log('link', $('#urlLink').val())
+	}
+</script>
+</body>
+</html>
