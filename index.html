@@ -321,8 +321,14 @@
 <!-- my own script -->
 <script type="text/javascript">
 	function helloWorld(){
+
+		ga('send', {
+			hitType: 'event',
+			eventCategory: 'try',
+			eventAction: 'click',
+			eventLabel: 'Coba sekarang'
+		});
 		alert(`sek masih dibikinin, sabar ya.`)
-    ga('send', 'event', "try", "click", "coba sekarang");
 	}
 </script>
 </body>
