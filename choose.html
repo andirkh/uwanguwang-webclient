@@ -25,15 +25,8 @@
   <meta name="theme-color" content="#444543">
 	<!-- Don't forget to add your metadata here -->
 	<link rel='stylesheet' href='css/style.css' />
-	<title>Coba Uwang Uwang: Step 2</title>
-	<script>
-		var readQuestionMark = location.search
-		if(readQuestionMark.slice(0, 7) !== '?theme=') {
-			alert("kamu belum pilih tema website nya")
-			window.location = "/choose"
-		}
-	</script>
-	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fd9b3d42-a079-4ca3-aac8-9cca141cb847";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+	<title>Coba Uwang Uwang: Step 1</title>
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fd9b3d42-a079-4ca3-aac8-9cca141cb847";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
 <body>
 	<!-- navbar -->
@@ -57,26 +50,17 @@
 		</div>
 	</div>
 	<!-- Authentication pages -->
-	<div class="auth">
+  <div class="expanded landing__section">
 		<div class="container">
-			<div class="auth__inner">
-				<div class="auth__media">
-					<img src="./assets/undraw_hello_aeia.svg">
-					<p style="font-size: .7em">*btw, lebih enak dikerjakan di PC/Laptop/Tablet</p>
+			<div class="expanded__inner">
+				<div class="expanded__media">
+					<img src="../../assets/entis.png" class="expanded__image">
 				</div>
-				<div class="auth__auth">
-
-					<h3>1. Buat Duplikat <a href="https://docs.google.com/spreadsheets/d/1Qs2GvuedwSE0lwRO6cFiF8fAuqvu8LuOrCoUUzPa1AM/copy" target="_blank" style="border-bottom:10px solid #bfd542"> Spreadsheet ini </a></h3>
-					<h3>2. Klik File -> Publish to Web -> OK</h3>
-					<h3>3. "Copy" URL-nya</h3>
-					<img src="assets/copy1.png"></img>
-					<h3>4. "Paste" disini 👇</h3>
-
-					<input
-						type="text"
-						id='urlLink' placeholder="https://docs.google.com/spreadsheets/d/1U6xv1c27g0B7aFyyKGSpLHFTKAYbjRVVH3dB6qgb488/edit#gid=155590555" autocomplete="off">
-					<h1>
-						<button type='submit' class="button button__accent" onclick="generate()">Generate</button>
+				<div class="expanded__content">
+					<h2 class="expanded__title">Coba Website Resume</h2>
+					<p class="expanded__text">Buat Web Resume diri sendiri, gak pakai repot, gak pakai koding. Customable cuma pakai Spreadsheet. Coba liat <a href="https://uwanguwang.com/apps/resume/index?key=1Qs2GvuedwSE0lwRO6cFiF8fAuqvu8LuOrCoUUzPa1AM" target="_blank" style="border-bottom: 4px solid #bfd542">live preview-nya</a> dulu. Gambar cuma contoh aja, wkwk.</p>
+          <h1>
+						<button type='submit' class="button button__accent" onclick="goto('resume')">Ok, Pilih</button>
 					</h1>
 				</div>
 			</div>
@@ -97,34 +81,21 @@
 </script>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script type="text/javascript">
-	function generate(){
-		var resourceUrl = $('#urlLink').val()
-		if(resourceUrl.length === 0){
-			alert('link tidak boleh kosong')
-		} else if(resourceUrl.length < 10){
-			alert('link tidak cocok, coba ikutin lg stepnya')
-		} else {
-			var apiKey = new RegExp("/spreadsheets/d/([a-zA-Z0-9-_]+)").exec(resourceUrl);
-
-			if(apiKey){
-				var readQuestionMark = location.search
-				var theme = readQuestionMark.slice(7)
-
-				var websiteUrl = 'https://uwanguwang.com/apps/' + theme + '/index?key=' + apiKey[1]
-				alert('Yay, Selamat kamu berhasil! kamu akan dpt link webmu. \nUntuk edit webmu, tentu dr spreadheet yg barusan kamu copy ;) Happy Editing ya!')
-				window.open(websiteUrl, '_blank')
-			} else {
-				alert(`ada yg salah dengan spreadsheetmu, \ncheck kembali tiap step-nya \n\nkalo bingung boleh chat di kanan bawah :)`)
-			}
-		}
-
-		ga('send', {
-			hitType: 'event',
-			eventCategory: 'generate',
-			eventAction: 'click',
-			eventLabel: 'Generate'
-		});
+  function eventAnalytics(name){
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'theme',
+      eventAction: 'click',
+      eventLabel: theme
+    });
+  }
+  
+	function goto(theme){
+		var link = '/try?theme=' + theme;
+    eventAnalytics(theme)
+    window.location = link
 	}
+
 </script>
 </body>
 </html>

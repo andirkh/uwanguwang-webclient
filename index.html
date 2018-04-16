@@ -25,7 +25,7 @@
   <meta name="theme-color" content="#444543">
 	<!-- Don't forget to add your metadata here -->
 	<link rel='stylesheet' href='css/style.css' />
-	<title>Uwang Uwang</title>
+	<title>Uwang Uwang: Spreadsheet jadi Web !</title>
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fd9b3d42-a079-4ca3-aac8-9cca141cb847";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
 <body>
@@ -270,7 +270,7 @@
 		<div class="container">
 			<div class="cta__inner">
 				<!-- <h1 class="cta__title">mumpung masih masa development.</h1> -->
-				<h1><a href="#" class="button button__accent" onclick="helloWorld()">Coba Sekarang</a></h1>
+				<h1><a href="/choose" class="button button__accent" onclick="eventAnalytics()">Coba Sekarang</a></h1>
 				<p class="cta__sub cta__sub--center">*Gratis, mumpung masih masa development.</p>
 			</div>
 		</div>
@@ -322,15 +322,13 @@
 </script>
 <!-- my own script -->
 <script type="text/javascript">
-	function helloWorld(){
-
+	function eventAnalytics(){
 		ga('send', {
 			hitType: 'event',
 			eventCategory: 'try',
 			eventAction: 'click',
 			eventLabel: 'Coba sekarang'
 		});
-		alert(`sek masih dibikinin, sabar ya.`)
 	}
 </script>
 </body>
