@@ -8,6 +8,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- social media -->
+    <meta name="title" content="Uwang Uwang">
+    <meta name="description" content="Bikin Website dari Spreadsheet buat Promosi">
+    <meta name="author" content="Uwang Uwang">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Uwang Uwang">
+    <meta name="twitter:description" content="Bikin Website dari Spreadsheet buat Promosi">
+    <meta name="twitter:site" content="@andirkh">
+    <meta name="twitter:creator" content="@andirkh">
+    <meta name="twitter:image" content="https://uwanguwang.com/assets/uwanguwang-banner.jpg">
+
     <title>Resume - Uwanguwang</title>
 
     <!-- Bootstrap core CSS -->
@@ -173,6 +185,9 @@
             var minat = tabletop.sheets("minat").elements;
             var prestasi = tabletop.sheets("prestasi").elements;
 
+            $('title').empty()
+            $('title').append('Resume ' + data_diri[1].Isi + ': Demo uwanguwang.com')
+
             //ATAS
             $('#photoProfile').attr("src", data_diri[0].Isi)
             $('#namaLengkap').append(data_diri[1].Isi)
@@ -183,6 +198,7 @@
             $('#facebook').attr("href", data_diri[6].Isi)
             $('#twitter').attr("href", data_diri[7].Isi)
             $('#linkedin').attr("href", data_diri[8].Isi)
+
 
             //EXPERIENCE
             for(var i = 0; i < pengalaman.length; i++){
