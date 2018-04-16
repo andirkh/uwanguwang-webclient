@@ -149,7 +149,10 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
     <!-- our code -->
     <script type="text/javascript">
-      var KEY = '1Qs2GvuedwSE0lwRO6cFiF8fAuqvu8LuOrCoUUzPa1AM';
+      var readQuestionMark = location.search
+      if(readQuestionMark.slice(0, 5) !== '?key=') window.location = "/"
+
+      var KEY = readQuestionMark.slice(5);
       var URL = "https://docs.google.com/spreadsheets/d/" + KEY + '/pubhtml'
       function init() {
       Tabletop.init( { key: URL,
@@ -158,6 +161,12 @@
             // console.log("data from sheet 2", tabletop.sheets("test2").elements)
 
             var data_diri = tabletop.sheets("data_diri").elements;
+
+            if(!data_diri){
+              alert("no data found");
+              window.location = "/"
+            }
+
             var pengalaman = tabletop.sheets("pengalaman").elements;
             var pendidikan = tabletop.sheets("pendidikan").elements;
             var ketrampilan = tabletop.sheets("ketrampilan").elements;
