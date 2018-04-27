@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -175,7 +173,8 @@
       var KEY = readQuestionMark.slice(5);
       var URL = "https://docs.google.com/spreadsheets/d/" + KEY + '/pubhtml'
       function init() {
-      Tabletop.init( { key: URL,
+      Tabletop.init( {
+         key: URL,
          callback: function(data, tabletop) {
             // console.log("data from sheet 1", tabletop.sheets("test1").elements)
             // console.log("data from sheet 2", tabletop.sheets("test2").elements)
@@ -268,6 +267,7 @@
          simpleSheet: false } )
       }
       window.addEventListener('DOMContentLoaded', init)
+      
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>
